@@ -14,11 +14,5 @@ public class UserController {
         return "add";
     }
 
-    @ExceptionHandler(value={java.lang.ArithmeticException.class})
-    public ModelAndView handlerArithmeticException(Exception e) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("exception", e.toString());
-        modelAndView.setViewName("mathError");
-        return modelAndView;
-    }
+
 }
